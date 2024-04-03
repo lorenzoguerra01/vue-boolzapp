@@ -1,8 +1,8 @@
 /* *****RESET***** */
 :root {
-    --color-bg-top: #009688; 
-    --color-bg-bottom: #d9dbd6; 
-    --color-bg-top-card: #eaeaea; 
+    --color-bg-top: #009688;
+    --color-bg-bottom: #d9dbd6;
+    --color-bg-top-card: #eaeaea;
     --color-bg-popup: #8edafc;
     --color-bg-fa-solid: #b1b1b1;
 }
@@ -24,12 +24,17 @@ a {
     color: var(--color-);
     text-decoration: none;
 }
+
 img {
     width: 50px;
 }
+
 .fa-solid {
     padding: 0 10px;
     color: var(--color-bg-fa-solid);
+}
+.fa-bell-slash {
+    color: var(--color-bg-popup);
 }
 /* font awsome{
     content: "\";
@@ -67,11 +72,25 @@ img {
     width: 100%;
     background-color: white;
 }
+
 .ms_top-card {
-    height: 60px;
     padding: 10px;
     background-color: var(--color-bg-top-card);
 }
+
+.ms_popup {
+    padding: 10px;
+    background-color: var(--color-bg-popup);
+} 
+.ms_rounded-circle {
+    aspect-ratio: 1 / 1;
+    display: flex;
+    align-content: center;
+}
+
+
+
+
 .ms_box {
     border: 1px solid black;
     display: flex;
