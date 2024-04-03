@@ -44,6 +44,8 @@ img {
 
 /* *******BODY*******  */
 /* header  */
+#contact {
+}
 
 /* main  */
 
@@ -88,9 +90,6 @@ img {
     align-content: center;
 }
 
-
-
-
 .ms_box {
     border: 1px solid black;
     display: flex;
@@ -99,7 +98,6 @@ img {
     flex-wrap: wrap;
     cursor: crosshair;
 }
-
 /* flex utility  */
 /* media query  */
 /* @media screen and (max-width: 1200px) {}   */

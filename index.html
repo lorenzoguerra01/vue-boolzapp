@@ -52,7 +52,7 @@
                             <small class="text-decoration-underline ">Attiva notifiche desktop</small>
                         </div>
                     </div>
-                    <div class="overflow-y-scroll">
+                    <div id="contact" class="overflow-y-scroll">
                         <div class="d-flex gap-2 p-1 border " v-for="(contact, index) in contacts">
                             <img :src="contact.avatar" alt="me-avatar" class="img-fluid rounded-circle">
                             <div>
@@ -65,12 +65,13 @@
                 </div>
 
                 <div class="col-8 p-0 border-end">
-                    <div class="d-flex ms_top-card align-items-center justify-content-between">
+                    <div class="d-flex ms_top-card align-items-center">
+                        <img src="img/avatar_io.jpg" alt="me-avatar" class="img-fluid rounded-circle">
                         <div>
-                            <img src="img/avatar_io.jpg" alt="me-avatar" class="img-fluid rounded-circle">
-                            <span class="fw-semibold">Sofia</span>
+                            <span class="fw-semibold">Sofia</span> <br>
+                            <small>Ultimo accesso oggi alle 12:00</small>
                         </div>
-                        <div>
+                        <div class="ms-auto ">
                             <i class="fa-solid fa-magnifying-glass"></i>
                             <i class="fa-solid fa-paperclip"></i>
                             <i class="fa-solid fa-ellipsis-vertical"></i>
