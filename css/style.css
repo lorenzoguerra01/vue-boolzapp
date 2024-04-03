@@ -1,0 +1,77 @@
+/* *****RESET***** */
+:root {
+    /* --color-:;  */
+}
+
+.ms_debug {
+    border: 1px solid red;
+}
+
+/* *****GENERAL***** */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    /* font-family: "Nome del Font", sans-serif;  */
+}
+
+a {
+    color: var(--color-);
+    text-decoration: none;
+}
+
+/* font awsome{
+    content: "\";
+    font-family: 'Font Awesome\ 6 Free';
+    font-weight: 900;
+} */
+
+/* *******BODY*******  */
+/* header  */
+
+/* main  */
+
+/* footer  */
+
+
+/* *******UTILITIES*******  */
+/* utility  */
+.ms_btn {
+    display: inline-block;
+    padding: 6px 12px;
+}
+
+.ms_screen {
+    height: 100vh;
+    background-color: green;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.ms_card {
+    height: 80vh !important;
+    width: 80%;
+    overflow: auto;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.ms_box {
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    cursor: crosshair;
+}
+
+/* flex utility  */
+/* media query  */
+/* @media screen and (max-width: 1200px) {}   */
+/* @media screen and (max-width: 992px) {}  */
+/* @media screen and (max-width: 768px) {}  */
+/* @media screen and (max-width: 576px) {}  */
