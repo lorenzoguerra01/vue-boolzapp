@@ -29,18 +29,16 @@ createApp({
                 message: this.chatText,
                 status: 'sent'
             }
-            contacts[this.activeContactId - 1].messages.push(newText);
+            this.contacts[this.activeContactId - 1].messages.push(newText);
             console.log(newText);
             console.log(contacts[this.activeContactId - 1].messages);
-            this.$forceUpdate();
             setTimeout(() => {
                 let newText = {
                     date: new Date().toLocaleString(),
                     message: 'Ok',
                     status: 'received'
                 }
-                contacts[this.activeContactId - 1].messages.push(newText);
-                this.$forceUpdate();
+                this.contacts[this.activeContactId - 1].messages.push(newText);
             }, 1000)
         },
     },
