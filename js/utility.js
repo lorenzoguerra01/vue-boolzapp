@@ -82,10 +82,15 @@ function isRandomImage(x, y, alt) {
     let image = `<img src="https://picsum.photos/${x}/${y}?random=${getRndInteger(1, 10000)}" alt="img-${alt}"></img>`;
     return image;
 }
+function isRanDOMImage(x, y) {
+    let image = `https://picsum.photos/${x}/${y}?random=${getRndInteger(1, 10000)}`;
+    return image;
+}
+
 // global variables 
 
 let display = document.getElementById("display");
 
 // EXPORT
 
-export { };
+export {isRanDOMImage};

@@ -29,13 +29,13 @@
 
 <body>
     <div id="app" class="ms_screen">
-        <div class="ms_card container">
-            <div class="row">
-                <div class="col-4 p-0  border-end">
+        <div class="container h-100 bg-white">
+            <div class="row h-100 ">
+                <div class="col-4 h-100 p-0 border-end">
                     <div class="d-flex ms_top-card align-items-center justify-content-between">
                         <div>
-                            <img src="img/avatar_io.jpg" alt="me-avatar" class="img-fluid rounded-circle">
-                            <span class="fw-semibold">Sofia</span>
+                            <img :src="isRanDOMImage(50, 50)" alt="me-avatar" class="img-fluid rounded-circle">
+                            <span class="fw-semibold ps-3">WAR</span>
                         </div>
                         <div>
                             <i class="fa-solid fa-circle-notch"></i>
@@ -44,13 +44,24 @@
                         </div>
                     </div>
                     <div class="ms_popup d-flex gap-2">
-                        <div class="bg-white rounded-circle d-inline-block ms_rounded-circle p-1">
+                        <div class="bg-white rounded-circle ms_aspect-ratio text-center align-content-center ">
                             <i class="fa-solid fa-bell-slash"></i>
                         </div>
                         <div>
                             <span>Ricevi notifiche di nuovi messaggi</span> <br>
                             <small class="text-decoration-underline ">Attiva notifiche desktop</small>
                         </div>
+                    </div>
+                    <div class="ms_search align-content-center bg-body-tertiary">
+                        <form class="container-fluid">
+                            <div class="input-group">
+                                <span class="input-group-text" id="basic-addon1">
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                </span>
+                                <input type="text" class="form-control" placeholder="Cerca o inizia una nuova chat" aria-label="Username"
+                                    aria-describedby="basic-addon1">
+                            </div>
+                        </form>
                     </div>
                     <div id="contact" class="overflow-y-scroll">
                         <div class="d-flex gap-2 p-1 border " v-for="(contact, index) in contacts">
@@ -64,7 +75,7 @@
                     </div>
                 </div>
 
-                <div class="col-8 p-0 border-end">
+                <div class="col-8 h-100 p-0 border-end">
                     <div class="d-flex ms_top-card align-items-center">
                         <img src="img/avatar_io.jpg" alt="me-avatar" class="img-fluid rounded-circle">
                         <div>
@@ -77,6 +88,22 @@
                             <i class="fa-solid fa-ellipsis-vertical"></i>
                         </div>
                     </div>
+                    <div class="ms_chat">
+
+                    </div>
+                    <div class="ms_bottom-card d-flex align-items-center">
+                        <form class="container-fluid">
+                            <div class="input-group">
+                                <span class="input-group-text" id="basic-addon1">
+                                    <i class="fa-regular fa-face-smile"></i>
+                                </span>
+                                <input type="text" class="form-control" placeholder="Scrivi un messaggio" aria-label="Username"
+                                    aria-describedby="basic-addon1">
+                            </div>
+                        </form>
+                        <i class="fa-solid fa-microphone"></i>
+                    </div>
+
                 </div>
             </div>
         </div>
