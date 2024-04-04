@@ -78,7 +78,8 @@
 
                 <div class="col-8 h-100 p-0 border-end">
                     <div class="d-flex ms_top-card align-items-center">
-                        <img :src="contacts[activeContactId - 1]?.avatar" alt="me-avatar" class="img-fluid rounded-circle">
+                        <img :src="contacts[activeContactId - 1]?.avatar" alt="me-avatar"
+                            class="img-fluid rounded-circle">
                         <div>
                             <span class="fw-semibold">{{contacts[activeContactId - 1]?.name}}</span> <br>
                             <small>Ultimo accesso oggi alle 12:00</small>
@@ -90,7 +91,9 @@
                         </div>
                     </div>
                     <div class="ms_chat">
-                        
+                        <div class="d-flex" v-for="(mex, index) in contacts[activeContactId - 1]?.messages">
+                            <div class="ms_chat-bubble"  :class="{'ms_sent': mex.status === 'sent'}">{{mex.message}}</div>
+                        </div>
                     </div>
                     <div class="ms_bottom-card d-flex align-items-center">
                         <form class="container-fluid">
