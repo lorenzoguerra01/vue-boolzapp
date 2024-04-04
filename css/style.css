@@ -52,7 +52,12 @@ img {
 #contact {
     height: calc(100% - 200px);
 }
-
+#contact>div:hover {
+    background-color: #e9ebeb;
+}
+.ms_active {
+    background-color: #e9ebeb;
+}
 /* main  */
 
 /* footer  */

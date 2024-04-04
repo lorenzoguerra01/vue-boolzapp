@@ -58,13 +58,14 @@
                                 <span class="input-group-text" id="basic-addon1">
                                     <i class="fa-solid fa-magnifying-glass"></i>
                                 </span>
-                                <input type="text" class="form-control" placeholder="Cerca o inizia una nuova chat" aria-label="Username"
-                                    aria-describedby="basic-addon1">
+                                <input type="text" class="form-control" placeholder="Cerca o inizia una nuova chat"
+                                    aria-label="Username" aria-describedby="basic-addon1">
                             </div>
                         </form>
                     </div>
                     <div id="contact" class="overflow-y-scroll">
-                        <div class="d-flex gap-2 p-1 border " v-for="(contact, index) in contacts">
+                        <div class="d-flex gap-2 p-1 border " :class="{'ms_active': contact.id === activeContactId} "
+                            v-for="(contact, index) in contacts" :key="contact.id" @click="activeContact(contact.id)">
                             <img :src="contact.avatar" alt="me-avatar" class="img-fluid rounded-circle">
                             <div>
                                 <span class="fw-semibold">{{contact.name}}</span> <br>
@@ -77,9 +78,9 @@
 
                 <div class="col-8 h-100 p-0 border-end">
                     <div class="d-flex ms_top-card align-items-center">
-                        <img src="img/avatar_io.jpg" alt="me-avatar" class="img-fluid rounded-circle">
+                        <img :src="contacts[activeContactId - 1]?.avatar" alt="me-avatar" class="img-fluid rounded-circle">
                         <div>
-                            <span class="fw-semibold">Sofia</span> <br>
+                            <span class="fw-semibold">{{contacts[activeContactId - 1]?.name}}</span> <br>
                             <small>Ultimo accesso oggi alle 12:00</small>
                         </div>
                         <div class="ms-auto ">
@@ -89,7 +90,7 @@
                         </div>
                     </div>
                     <div class="ms_chat">
-
+                        
                     </div>
                     <div class="ms_bottom-card d-flex align-items-center">
                         <form class="container-fluid">
@@ -97,13 +98,12 @@
                                 <span class="input-group-text" id="basic-addon1">
                                     <i class="fa-regular fa-face-smile"></i>
                                 </span>
-                                <input type="text" class="form-control" placeholder="Scrivi un messaggio" aria-label="Username"
-                                    aria-describedby="basic-addon1">
+                                <input type="text" class="form-control" placeholder="Scrivi un messaggio"
+                                    aria-label="Username" aria-describedby="basic-addon1">
                             </div>
                         </form>
                         <i class="fa-solid fa-microphone"></i>
                     </div>
-
                 </div>
             </div>
         </div>
