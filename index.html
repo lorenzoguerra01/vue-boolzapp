@@ -92,17 +92,18 @@
                     </div>
                     <div class="ms_chat">
                         <div class="d-flex" v-for="(mex, index) in contacts[activeContactId - 1]?.messages">
-                            <div class="ms_chat-bubble"  :class="{'ms_sent': mex.status === 'sent'}">{{mex.message}}</div>
+                            <div class="ms_chat-bubble" :class="{'ms_sent': mex.status === 'sent'}">{{mex.message}}
+                            </div>
                         </div>
                     </div>
                     <div class="ms_bottom-card d-flex align-items-center">
-                        <form class="container-fluid">
+                        <form class="container-fluid" @submit.prevent>
                             <div class="input-group">
-                                <span class="input-group-text" id="basic-addon1">
+                                <span class="input-group-text">
                                     <i class="fa-regular fa-face-smile"></i>
                                 </span>
                                 <input type="text" class="form-control" placeholder="Scrivi un messaggio"
-                                    aria-label="Username" aria-describedby="basic-addon1">
+                                    v-model="chatText" @keyup.enter="enterText()">
                             </div>
                         </form>
                         <i class="fa-solid fa-microphone"></i>
