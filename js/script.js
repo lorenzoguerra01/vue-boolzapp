@@ -24,22 +24,24 @@ createApp({
             return `${hours}:${minutes}`;
         },
         enterText() {
-            let newText = {
-                date: new Date().toLocaleString(),
-                message: this.chatText,
-                status: 'sent'
-            }
-            this.contacts[this.activeContactId - 1].messages.push(newText);
-            console.log(newText);
-            console.log(contacts[this.activeContactId - 1].messages);
-            setTimeout(() => {
+            if (this.chatText !== '') {
                 let newText = {
                     date: new Date().toLocaleString(),
-                    message: 'Ok',
-                    status: 'received'
+                    message: this.chatText,
+                    status: 'sent'
                 }
                 this.contacts[this.activeContactId - 1].messages.push(newText);
-            }, 1000)
+                console.log(newText);
+                console.log(contacts[this.activeContactId - 1].messages);
+                setTimeout(() => {
+                    let newText = {
+                        date: new Date().toLocaleString(),
+                        message: 'Ok',
+                        status: 'received'
+                    }
+                    this.contacts[this.activeContactId - 1].messages.push(newText);
+                }, 1000)
+            }
         },
     },
     computed: {
