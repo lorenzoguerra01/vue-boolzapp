@@ -1,6 +1,8 @@
 import { isRanDOMImage } from './utility.js';
 import { contacts } from './data.js';
 
+const dt = luxon.DateTime;
+
 const { createApp } = Vue;
 createApp({
     data() {
