@@ -10,7 +10,7 @@ createApp({
             contacts,
             activeContactId: 1,
             chatText: '',
-            searchText: ''
+            searchText: '',
         }
     },
     methods: {

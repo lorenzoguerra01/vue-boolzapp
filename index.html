@@ -60,13 +60,15 @@
                                 <span class="input-group-text" id="basic-addon1">
                                     <i class="fa-solid fa-magnifying-glass"></i>
                                 </span>
-                                <input type="text" class="form-control" placeholder="Cerca o inizia una nuova chat" v-model="searchText" @keyup="">
+                                <input type="text" class="form-control" placeholder="Cerca o inizia una nuova chat"
+                                    v-model="searchText" @keyup="">
                             </div>
                         </form>
                     </div>
                     <div id="contact" class="overflow-y-scroll">
                         <div class="d-flex gap-2 p-1 border " :class="{'ms_active': contact.id === activeContactId} "
-                            v-for="(contact, index) in searchedContacts" :key="contact.id" @click="activeContact(contact.id)">
+                            v-for="(contact, index) in searchedContacts" :key="contact.id"
+                            @click="activeContact(contact.id)">
                             <img :src="contact.avatar" alt="me-avatar" class="img-fluid rounded-circle">
                             <div>
                                 <span class="fw-semibold">{{contact.name}}</span> <br>
@@ -94,7 +96,10 @@
                     <div class="ms_chat">
                         <div class="d-flex" v-for="(mex, index) in contacts[activeContactId - 1]?.messages">
                             <div class="ms_chat-bubble text-end " :class="{'ms_sent': mex.status === 'sent'}">
-                                <div class="pe-5 ">{{mex.message}}</div>
+                                <div >
+                                    <span class="pe-5">{{mex.message}}</span>
+                                    <i class="fa-solid fa-angle-down"></i>
+                                </div>
                                 <small class="fw-lighter ">{{ getTimeFromDate(mex.date) }}</small>
                             </div>
                         </div>
