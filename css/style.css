@@ -132,6 +132,16 @@ img {
     opacity: 1;
 }
 
+.ms_menu {
+    position: absolute;
+    line-height: 2;
+    text-align: start;
+    background-color: white;
+    padding: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
 .ms_aspect-ratio {
     aspect-ratio: 1 / 1;
 }

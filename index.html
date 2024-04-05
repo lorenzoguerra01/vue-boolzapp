@@ -95,12 +95,21 @@
                     </div>
                     <div class="ms_chat">
                         <div class="d-flex" v-for="(mex, index) in contacts[activeContactId - 1]?.messages">
-                            <div class="ms_chat-bubble text-end " :class="{'ms_sent': mex.status === 'sent'}">
-                                <div >
+                            <div class="ms_chat-bubble text-end position-relative"
+                                :class="{'ms_sent': mex.status === 'sent'}">
+                                <div>
                                     <span class="pe-5">{{mex.message}}</span>
-                                    <i class="fa-solid fa-angle-down"></i>
+                                    <span class="dropdown">
+                                        <span data-bs-toggle="dropdown" aria-expanded="false">
+                                            <i class="fa-solid fa-angle-down"></i>
+                                        </span>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="#">Info messaggio</a></li>
+                                            <li><a class="dropdown-item" href="#">Cancella messaggio</a></li>
+                                        </ul>
+                                    </span>
                                 </div>
-                                <small class="fw-lighter ">{{ getTimeFromDate(mex.date) }}</small>
+                                <small class="fw-lighter">{{ getTimeFromDate(mex.date)}}</small>
                             </div>
                         </div>
                     </div>
