@@ -45,6 +45,9 @@ createApp({
                 }, 1000)
             }
         },
+        deleteText(i) {
+            this.contacts[this.activeContactId - 1].messages.splice(i, 1);
+        }
     },
     computed: {
         searchedContacts() {
