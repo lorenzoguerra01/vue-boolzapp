@@ -74,7 +74,7 @@
                                 <span class="fw-semibold">{{contact.name}}</span> <br>
                                 <small>Ultimo messaggio inviato</small>
                             </div>
-                            <small class="ms-auto ">12:00</small>
+                            <small class="ms-auto ">{{ getTimeFromDate(contact.messages[lastText2(contact.id)].date)}}</small>
                         </div>
                     </div>
                 </div>
@@ -85,7 +85,7 @@
                             class="img-fluid rounded-circle">
                         <div>
                             <span class="fw-semibold">{{contacts[activeContactId - 1]?.name}}</span> <br>
-                            <small>Ultimo accesso oggi alle 12:00</small>
+                            <small>Ultimo accesso oggi alle {{ getTimeFromDate(contacts[activeContactId - 1]?.messages[lastText()].date)}}</small>
                         </div>
                         <div class="ms-auto ">
                             <i class="fa-solid fa-magnifying-glass"></i>

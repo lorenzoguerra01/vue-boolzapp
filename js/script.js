@@ -31,7 +31,7 @@ createApp({
                     date: new Date().toLocaleString(),
                     message: this.chatText,
                     status: 'sent'
-                }
+                };
                 this.contacts[this.activeContactId - 1].messages.push(newText);
                 console.log(newText);
                 console.log(contacts[this.activeContactId - 1].messages);
@@ -42,12 +42,20 @@ createApp({
                         status: 'received'
                     }
                     this.contacts[this.activeContactId - 1].messages.push(newText);
-                }, 1000)
+                }, 1000);
+                this.chatText = '';
             }
         },
         deleteText(i) {
             this.contacts[this.activeContactId - 1].messages.splice(i, 1);
+        },
+        lastText() {
+            return this.contacts[this.activeContactId - 1].messages.length - 1;
+        },
+        lastText2(id) {
+            return this.contacts[id - 1].messages.length - 1;
         }
+
     },
     computed: {
         searchedContacts() {
