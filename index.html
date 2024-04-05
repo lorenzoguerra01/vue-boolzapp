@@ -61,7 +61,7 @@
                                     <i class="fa-solid fa-magnifying-glass"></i>
                                 </span>
                                 <input type="text" class="form-control" placeholder="Cerca o inizia una nuova chat"
-                                    v-model="searchText" @keyup="">
+                                    v-model="searchText">
                             </div>
                         </form>
                     </div>
@@ -72,9 +72,9 @@
                             <img :src="contact.avatar" alt="me-avatar" class="img-fluid rounded-circle">
                             <div>
                                 <span class="fw-semibold">{{contact.name}}</span> <br>
-                                <small>Ultimo messaggio inviato</small>
+                                <small>{{ truncateMessage(getLastMessage(contact)) }}</small>
                             </div>
-                            <small class="ms-auto ">{{ getTimeFromDate(contact.messages[lastText2(contact.id)].date)}}</small>
+                            <small class="ms-auto ">{{ (getLastDate(contact)) }}</small>
                         </div>
                     </div>
                 </div>
@@ -85,7 +85,7 @@
                             class="img-fluid rounded-circle">
                         <div>
                             <span class="fw-semibold">{{contacts[activeContactId - 1]?.name}}</span> <br>
-                            <small>Ultimo accesso oggi alle {{ getTimeFromDate(contacts[activeContactId - 1]?.messages[lastText()].date)}}</small>
+                            <small> {{getLastAccess}}</small>
                         </div>
                         <div class="ms-auto ">
                             <i class="fa-solid fa-magnifying-glass"></i>
